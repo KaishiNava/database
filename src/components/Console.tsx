@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 
 type TableInfo={table_name:string};
 type Result={columns:string[];rows:Record<string,unknown>[];rowCount:number;command?:string};
-type Stats={database:string;user:string;version:string;size:string;tableCount:number;totalRows:number;serverTime:string};
+type Stats={database:string;user:string;version:string;size:string;tableCount:number;totalRows:number;serverTime:string;engine?:string};
 const VIDEO="https://zfile.web.id/N2G6oqG.mp4";
 const starters=[
   {label:"Inspect tables",sql:"SELECT table_name FROM information_schema.tables WHERE table_type = 'BASE TABLE' ORDER BY table_name;"},
